@@ -1,4 +1,4 @@
-export const CHECKOUT_URL = 'https://pay.hotmart.com/N108478003F?off=h15lex81';
+export const CHECKOUT_URL = 'https://pay.hotmart.com/N108478003F?checkoutMode=10';
 export const DOWNSELL_CHECKOUT_URL = 'https://pay.hotmart.com/N108478003F?off=uf83rgqi';
 
 export const ASSETS = {
