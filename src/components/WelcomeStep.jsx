@@ -34,7 +34,7 @@ export default function WelcomeStep({ onStart }) {
 
           {/* HERO VISUAL BANNER / PREVIEW IMAGE */}
           <div className="relative w-full max-w-[420px] mx-auto rounded-2xl overflow-hidden border border-[#F0D2E4] shadow-sm bg-gradient-to-b from-[#FFF5F9] to-[#FAF0F6] group">
-            <img 
+            <img fetchPriority="high" decoding="async" 
               src={ASSETS.hero || ASSETS.gifs.fit1} 
               alt="Protocolo Glúteos Brasileños Preview" 
               className="w-full h-auto aspect-square object-cover object-top group-hover:scale-102 transition-transform duration-500"

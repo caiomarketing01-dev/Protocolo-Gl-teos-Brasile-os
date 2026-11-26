@@ -252,7 +252,7 @@ export default function CouponStep({ onClaimCoupon }) {
               
               {/* Optional App Mockup Visual Thumbnail */}
               <div className="w-full h-32 sm:h-36 rounded-xl overflow-hidden bg-white border border-[#F0DCEB] shadow-2xs flex items-center justify-center p-2">
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={ASSETS.mockup || '/assets/app2-DvhivXE3.webp'} 
                   alt="Plataforma Digital Protocolo Glúteos Brasileños" 
                   className="h-full object-contain"

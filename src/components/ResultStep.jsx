@@ -138,9 +138,15 @@ export default function ResultStep({ userAnswers }) {
 
           {/* APP PREVIEW BANNER */}
           <div className="relative rounded-[22px] overflow-hidden border border-[#F0D2E4] shadow-sm group bg-[#FAF2F7]">
-            <img 
-              src={ASSETS.gifs.sales1} 
-              alt="Protocolo Glúteos Brasileños App Preview" 
+            <video
+              src={ASSETS.gifs.sales1Video}
+              poster={ASSETS.gifs.sales1Poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Protocolo Glúteos Brasileños App Preview"
               className="w-full object-cover max-h-64 sm:max-h-72 group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-[#2B0B2E] text-xs font-black px-3.5 py-1.5 rounded-full flex items-center gap-1.5 shadow-md border border-[#F0DCEB] font-heading">
@@ -283,7 +289,7 @@ export default function ResultStep({ userAnswers }) {
               {BEFORE_AFTER_CASES.map((item) => (
                 <div key={item.id} className="group rounded-2xl overflow-hidden border border-[#F0DCEB] bg-[#FAF2F7] p-2 space-y-1.5 shadow-2xs hover:shadow-md transition-shadow">
                   <div className="relative rounded-xl overflow-hidden h-36 sm:h-44 bg-white">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src={item.image} 
                       alt={item.title} 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -317,7 +323,7 @@ export default function ResultStep({ userAnswers }) {
                     <div className="flex items-center gap-2.5 font-heading">
                       {t.avatar ? (
                         <div className="w-10 h-10 rounded-full overflow-hidden border border-[#F0DCEB] shrink-0 bg-white shadow-2xs">
-                          <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                          <img loading="lazy" decoding="async" src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
                         </div>
                       ) : (
                         <div className="w-10 h-10 rounded-full bg-[#FF2A85] text-white font-black flex items-center justify-center text-xs shrink-0">

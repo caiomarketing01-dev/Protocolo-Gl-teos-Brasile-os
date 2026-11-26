@@ -2,13 +2,15 @@ export const CHECKOUT_URL = 'https://pay.hotmart.com/N108478003F?checkoutMode=10
 export const DOWNSELL_CHECKOUT_URL = 'https://pay.hotmart.com/N108478003F?off=uf83rgqi';
 
 export const ASSETS = {
-  logo: '/assets/LOGO3-WGBt60gj.webp',
+  logo: '/assets/logo-sm.webp',
   hero: '/assets/hero-Buj0dMyA.webp',
   appMockup: '/assets/app2-DvhivXE3.webp',
   landingPromo: '/assets/landingpage_nova-D9AExXHH.webp',
   socialProof: '/images/social-1783313372611-ChatGPT_Image_5_de_jul._de_2026,_20_52_06.webp',
   gifs: {
     sales1: '/assets/gif-salespage-1-MfxSMHU2.gif',
+    sales1Video: '/assets/sales1.mp4',
+    sales1Poster: '/assets/sales1-poster.webp',
     fit1: '/assets/gif-sales-page-2-CeepqVlc.gif',
     homeFit: '/assets/landingpage_nova-D9AExXHH.webp',
   },
@@ -17,25 +19,25 @@ export const ASSETS = {
     alt: '/assets/coachapresentation-HCeA4fhh.webp',
   },
   results: [
-    '/assets/ba1-BznIB2qC.jpg',
-    '/assets/ba2-TWGQctri.jpg',
-    '/assets/ba3-qTxyqyYZ.jpg',
+    '/assets/ba1-BznIB2qC.webp',
+    '/assets/ba2-TWGQctri.webp',
+    '/assets/ba3-qTxyqyYZ.webp',
     '/assets/ba4-C9laZ4pf.webp',
     '/assets/ba5-ejwaX96j.webp',
-    '/assets/ba6-P_KDi3uZ.jpg',
+    '/assets/ba6-P_KDi3uZ.webp',
   ],
   ages: {
-    '18-29': '/assets/18-29-CINL6ef1.png',
-    '30-39': '/assets/30-39-DlwPfCB7.png',
-    '40-49': '/assets/40-50-DhYvfFZS.png',
-    '50plus': '/assets/50_-BjiVXxuV.png',
+    '18-29': '/assets/18-29-CINL6ef1.webp',
+    '30-39': '/assets/30-39-DlwPfCB7.webp',
+    '40-49': '/assets/40-50-DhYvfFZS.webp',
+    '50plus': '/assets/50_-BjiVXxuV.webp',
   },
   avatars: [
     '/images/avatar-w1.png',
     '/images/avatar-w2.png',
     '/images/avatar-w3.png',
   ],
-  vsl: '/assets/vsl-video.mp4',
+  vsl: '/assets/vsl-video-otimizado.mp4',
   vslCover: '/assets/capa-vsl.gif'
 };
 

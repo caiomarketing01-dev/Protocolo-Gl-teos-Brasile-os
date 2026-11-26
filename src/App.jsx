@@ -241,25 +241,26 @@ export default function App() {
   const currentStepData = QUIZ_STEPS[currentStepIndex] || QUIZ_STEPS[0];
   const isNavigating = useRef(false);
 
-  // INSTANT IMAGE & GIF PRELOADER IN BROWSER MEMORY
+  // LIGHT PRELOADER: only small images, after first paint (no GIFs/videos on first load)
   useEffect(() => {
     const urlsToPreload = [
-      ASSETS.logo,
-      ASSETS.vslCover,
-      ASSETS.gifs?.sales1,
-      ASSETS.gifs?.fit1,
-      ASSETS.gifs?.homeFit,
       ASSETS.coach?.main,
       ASSETS.coach?.alt,
       ...Object.values(ASSETS.ages || {}),
       ...(ASSETS.results || [])
     ];
-    urlsToPreload.forEach((url) => {
+    const run = () => urlsToPreload.forEach((url) => {
       if (url) {
         const img = new Image();
         img.src = url;
       }
     });
+    if ('requestIdleCallback' in window) {
+      const id = window.requestIdleCallback(run, { timeout: 3000 });
+      return () => window.cancelIdleCallback && window.cancelIdleCallback(id);
+    }
+    const t = setTimeout(run, 2000);
+    return () => clearTimeout(t);
   }, []);
 
   // COMPUTED CURRENT SLUG

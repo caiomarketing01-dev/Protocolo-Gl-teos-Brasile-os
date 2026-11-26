@@ -309,7 +309,7 @@ export default function BackRedirectStep({ onBackToQuiz }) {
               {(BEFORE_AFTER_CASES || []).slice(0, 2).map((item) => (
                 <div key={`case-${item.title}`} className="bg-[#FAF2F7] rounded-2xl p-2.5 border border-[#F0DCEB] space-y-1.5 text-center shadow-2xs">
                   <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-white">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src={item.image} 
                       alt={item.title}
                       className="w-full h-full object-cover"
